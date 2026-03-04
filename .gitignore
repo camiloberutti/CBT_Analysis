@@ -1,0 +1,43 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# .gitignore — CBT Spectral Analysis
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ── Private / group data (MUST NOT be committed) ─────────────────────────────
+data/group/
+
+# ── Paper dataset — do not redistribute (Maloney et al. 2024, Dryad) ─────────
+data/paper/*.xlsx
+data/paper/*.xls
+
+# ── Species metadata derived from the paper — do not redistribute ─────────────
+src/species_metadata.py
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ── Virtual environments ─────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Jupyter / IPython ────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── IDE / Editor ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS files ─────────────────────────────────────────────────────────────────
+Thumbs.db
+.DS_Store
+desktop.ini
