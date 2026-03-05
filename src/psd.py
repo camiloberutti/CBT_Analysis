@@ -1,7 +1,6 @@
 """
 Power Spectral Density (PSD) computation via Welch's method.
 
-Pure computation — no plotting.
 """
 
 import numpy as np
