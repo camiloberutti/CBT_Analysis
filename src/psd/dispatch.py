@@ -28,7 +28,7 @@ def compute_psd_by_method(
     # ── IRASA-Welch parameters (when irasa_spectrum_method='welch') ──
     irasa_avg_type: str = "mean",
     # ── IRASA-Medfilt parameters (when irasa_spectrum_method='medfilt') ──
-    irasa_medfilt_window: float = 0.5,
+    irasa_filt_len: float = 1.0,
     # ── IRASA-Wavelet parameters (when irasa_spectrum_method='wavelet') ──
     irasa_wavelet_freqs=None,
     irasa_n_cycles: int = 7,
@@ -49,11 +49,11 @@ def compute_psd_by_method(
     irasa_thresh    : (irasa) periodic-component threshold.
 
     irasa_spectrum_method : str — inner spectral method used *inside*
-        IRASA.  One of ``'welch'`` | ``'medfilt'`` | ``'wavelet'`` |
-        ``'multitaper'``.  Default ``'welch'``.
-    irasa_avg_type        : str — welch averaging type (``'mean'`` or
-        ``'median'``).  Only used when *irasa_spectrum_method='welch'*.
-    irasa_medfilt_window  : float — median-filter window in seconds.
+        IRASA.  One of ``'welch'`` | ``'medfilt'`` | ``'wavelet'``.
+        Default ``'welch'``.
+    irasa_avg_type        : str — welch/wavelet averaging type
+        (``'mean'`` or ``'median'``).
+    irasa_filt_len        : float — median-filter length in seconds.
         Only used when *irasa_spectrum_method='medfilt'*.
     irasa_wavelet_freqs   : 1-D array — frequencies for wavelet PSD.
         Required when *irasa_spectrum_method='wavelet'*.
@@ -97,7 +97,7 @@ def compute_psd_by_method(
             noverlap=noverlap,
             window=window,
             avg_type=irasa_avg_type,
-            medfilt_window=irasa_medfilt_window,
+            filt_len=irasa_filt_len,
             wavelet_freqs=irasa_wavelet_freqs,
             n_cycles=irasa_n_cycles,
         )
