@@ -1,10 +1,12 @@
-pandas
 numpy
-scipy
+pandas
 matplotlib
+scipy
 openpyxl
 neurodsp
+specparam
 pwlf
 scikit-learn
 rpy2
 ipykernel
+jupyter

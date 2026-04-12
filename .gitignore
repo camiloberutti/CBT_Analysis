@@ -1,87 +1,63 @@
-# Byte-compiled / optimized / DLL files
+# .gitignore - CBT Spectral Analysis
+
+# Private / group data
+data/group/
+
+# Paper dataset and derived metadata
+data/paper/*.xlsx
+data/paper/*.xls
+src/species_metadata.py
+
+# Python artifacts
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
+*.pyo
 *.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
 *.egg-info/
-.installed.cfg
 *.egg
+build/
+dist/
 
 # Virtual environments
-venv/
-.env/
 .venv/
+venv/
 env/
 ENV/
-
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints
-
-# VS Code
-.vscode/
-
-# MacOS
-.DS_Store
-
-# Windows
-Thumbs.db
-Desktop.ini
-
-# Logs
-*.log
-
-# Environment variables
 .env
 .env.*
 
-# Pytest / coverage
+# Jupyter / IPython
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
+Desktop.ini
+desktop.ini
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Testing / tooling caches
 .pytest_cache/
 .coverage
 coverage.xml
 htmlcov/
-
-# MyPy
 .mypy_cache/
 .dmypy.json
 dmypy.json
-
-# Pyre
 .pyre/
-
-# Ruff
 .ruff_cache/
-
-# Pytype
 .pytype/
-
-# Cython debug symbols
 cython_debug/
-
-# Temporary files
-*.tmp
-*.bak
-*.swp
-*~
-
-# Data files (optional – uncomment if you don’t want to track raw data)
-# 01_Data/
-
-# Notebook outputs (optional – keeps notebooks but removes outputs)
-# Uncomment if desired:
-# *.ipynb
